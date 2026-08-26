@@ -1,0 +1,67 @@
+.headerSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s;
+  margin-top: 42px;
+}
+.headerSection .linkedFile,
+.headerSection .CVFile {
+  color: #ffffff;
+  background-color: rgba(96, 96, 96, 0.13);
+  font-size: 16px;
+  display: flex;
+  gap: 16px;
+  padding: 5px 36px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: inset rgba(253, 253, 253, 0.075) 0px -2px 0px -1px;
+}
+.headerSection .linkedFile img,
+.headerSection .CVFile img {
+  width: 19px;
+}
+.headerSection .listUl {
+  list-style: none;
+  color: #ffffff;
+  background-color: rgba(96, 96, 96, 0.13);
+  display: flex;
+  gap: 10px;
+  height: 72px;
+  align-items: center;
+  border-radius: 45px;
+  padding: 0;
+  box-shadow: inset rgba(253, 253, 253, 0.075) 0px -2px 0px -1px;
+}
+.headerSection .listUl li {
+  padding-left: 45px;
+  padding-right: 45px;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 45px;
+}
+.headerSection .listUl .activeBackground {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.17);
+  border-radius: 45px;
+  z-index: 0;
+}
+.headerSection .listUl .liText {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  background-color: black;
+}
+
+/*# sourceMappingURL=App.css.map */
