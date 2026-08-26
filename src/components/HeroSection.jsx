@@ -5,6 +5,7 @@ function HeroSection() {
         <div className="header">
             <Header/>
         </div>
+      <img  className='HeroSmoke' src="/images/smokeAll.png" alt="" />
     </div>
   )
 }

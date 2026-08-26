@@ -1,1 +1,15 @@
 @use "./Header" as *;
+.HeroSection {
+
+  .HeroSmoke {
+    position: absolute;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+}

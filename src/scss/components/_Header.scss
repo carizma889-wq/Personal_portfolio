@@ -4,7 +4,8 @@
   justify-content: space-around;
   align-items: center;
   transition: 0.5s;
-  margin-top: 42px;
+  padding-top: 42px;
+
   .linkedFile,
   .CVFile {
     color: #ffffff;
@@ -16,6 +17,8 @@
     border-radius: 30px;
     backdrop-filter: blur(10px);
     box-shadow: inset rgba(253, 253, 253, 0.075) 0px -2px 0px -1px;
+    cursor: pointer;
+
     img {
       width: 19px;
     }

@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   transition: 0.5s;
-  margin-top: 42px;
+  padding-top: 42px;
 }
 .headerSection .linkedFile,
 .headerSection .CVFile {
@@ -16,6 +16,7 @@
   border-radius: 30px;
   backdrop-filter: blur(10px);
   box-shadow: inset rgba(253, 253, 253, 0.075) 0px -2px 0px -1px;
+  cursor: pointer;
 }
 .headerSection .linkedFile img,
 .headerSection .CVFile img {
@@ -54,6 +55,18 @@
 .headerSection .listUl .liText {
   position: relative;
   z-index: 1;
+}
+
+.HeroSection .HeroSmoke {
+  position: absolute;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 body {
