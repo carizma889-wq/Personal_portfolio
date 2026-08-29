@@ -1,4 +1,5 @@
 import Header from "./Header"
+import HeroContent from "./HeroContent"
 function HeroSection() {
   return (
     <div className="HeroSection">
@@ -6,6 +7,7 @@ function HeroSection() {
             <Header/>
         </div>
       <img  className='HeroSmoke' src="/images/smokeAll.png" alt="" />
+      <HeroContent/>
     </div>
   )
 }
