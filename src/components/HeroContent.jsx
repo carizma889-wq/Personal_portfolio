@@ -1,7 +1,7 @@
 import CurvedLoop from "./CurvedLoop";
 function HeroContent() {
   return (
-    <div>
+    <div className="HeroContent">
       <div className="skills">
         <CurvedLoop
           marqueeText="React ✦ sass ✦ Supabase ✦ Figma ✦ Web3 ✦ Api ✦"
@@ -10,7 +10,9 @@ function HeroContent() {
           direction="right"
         />
       </div>
-      <div className="imgageProfile"></div>
+      <div className="imgageProfile">
+        <img src="/images/1.png" alt="" />
+      </div>
       <div className="Specialization"></div>
     </div>
   );

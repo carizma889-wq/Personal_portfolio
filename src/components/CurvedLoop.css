@@ -1,9 +1,11 @@
 .curved-loop-jacket {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 200px;
+  margin-bottom: -250px;
 }
 
 .curved-loop-svg {

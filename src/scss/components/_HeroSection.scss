@@ -1,6 +1,9 @@
 @use "./Header" as *;
+@use "./HeroContent" as *;
 .HeroSection {
-
+  display: flex;
+  flex-direction: column;
+  gap: 350px;
   .HeroSmoke {
     position: absolute;
     width: 100%;
@@ -11,5 +14,7 @@
     transform: translateX(-50%);
     pointer-events: none;
     z-index: -1;
+    display: block;
+    margin-bottom: -200px;
   }
 }
