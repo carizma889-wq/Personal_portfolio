@@ -1,4 +1,6 @@
 import CurvedLoop from "./CurvedLoop";
+import TrueFocus from "./TrueFocus";
+import StartBar from "./StartBar";
 function HeroContent() {
   return (
     <div className="HeroContent">
@@ -11,9 +13,12 @@ function HeroContent() {
         />
       </div>
       <div className="imgageProfile">
-        <img src="/images/1.png" alt="" />
+        <img src="/images/1.jpg" alt="" />
       </div>
-      <div className="Specialization"></div>
+      <div className="Specialization">
+        <TrueFocus />
+      </div>
+      <StartBar/>
     </div>
   );
 }

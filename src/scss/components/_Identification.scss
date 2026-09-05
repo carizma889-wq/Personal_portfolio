@@ -1,0 +1,56 @@
+.IdentificationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin-top: 100px;
+
+  .greeting {
+    font-size: 61px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .me {
+    .hi {
+      font-size: 37.37px;
+      color: #ffffff;
+      font-weight: 200;
+      background-color: rgba(255, 255, 255, 5%);
+      padding: 19px 26px;
+      margin: 0;
+    }
+    .name {
+      margin: 0;
+      color: #ffffff;
+      font-size: 37.37px;
+      font-weight: 200;
+      background-color: rgba(255, 255, 255, 15%);
+      padding: 19px 26px;
+    }
+  }
+  .design {
+    font-size: 30.9px;
+    color: #ffffff8e;
+    font-family: "Spartan", sans-serif;
+    font-weight: 100;
+    margin-bottom: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 26.58px;
+      width: 0.92px;
+      background-color: rgba(255, 255, 255, 60%);
+      bottom: -25px;
+      left: 5px;
+    }
+  }
+  .programmer {
+    font-size: 30.9px;
+    color: #ffffff8e;
+    font-family: "Spartan", sans-serif;
+    font-weight: 100;
+    margin-bottom: 25px;
+  }
+}

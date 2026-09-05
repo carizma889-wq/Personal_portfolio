@@ -1,5 +1,6 @@
 @use "./Header" as *;
 @use "./HeroContent" as *;
+@use "./Identification" as *;
 .HeroSection {
   display: flex;
   flex-direction: column;
