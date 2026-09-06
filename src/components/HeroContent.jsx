@@ -1,10 +1,11 @@
 import CurvedLoop from "./CurvedLoop";
 import TrueFocus from "./TrueFocus";
 import StartBar from "./StartBar";
+import Skills from "./Skills";
 function HeroContent() {
   return (
     <div className="HeroContent">
-      <div className="skills">
+      <div className="tools">
         <CurvedLoop
           marqueeText="React ✦ sass ✦ Supabase ✦ Figma ✦ Web3 ✦ Api ✦"
           speed={1.6}
@@ -19,6 +20,9 @@ function HeroContent() {
         <TrueFocus />
       </div>
       <StartBar/>
+      <div className="skills">
+        <Skills/>
+      </div>
     </div>
   );
 }
