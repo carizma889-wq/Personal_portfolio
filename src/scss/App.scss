@@ -1,5 +1,5 @@
-@use "./components/HeroSection" as *;
-@use "./components/Showcase" as *;
+@use "./pages/home" as *;
+
 body {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;

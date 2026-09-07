@@ -17,7 +17,7 @@ function Showcase() {
         <ul className="list">
           {lists.map((list) => {
             return (
-              <li >
+              <li key={list.id}>
                 <div className="listLi">
                   <img src={list.img} alt="" />
                   <div className="text">
