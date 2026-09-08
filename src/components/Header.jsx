@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { motion } from "motion/react";
-import { listul } from "../assets/assets";
 function Header() {
   const [active, setActive] = useState("Home");
   const listul = ["Home", "About Me", "Projects", "Contact"];

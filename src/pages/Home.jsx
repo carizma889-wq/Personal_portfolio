@@ -1,12 +1,18 @@
-import Showcase from "@/components/Showcase"
+import Showcase from "../components/Showcase"
 import HeroSection from "../components/HeroSection"
-import Contact from "@/components/Contact"
+import Contact from "../components/Contact"
+import About from "@/components/about"
+import TechStack from "@/components/TechStack"
+import HeroFooter from "@/components/HeroFooter"
 function Home() {
   return (
     <>
     <HeroSection/>
     <Showcase/>
     <Contact/>
+    <About/>
+    <TechStack/>
+    <HeroFooter/>
     </>
   )
 }
