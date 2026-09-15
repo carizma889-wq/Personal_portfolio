@@ -13,7 +13,7 @@ function Skills() {
         {id:6,name:'C++',img:'./icons/c++ICon.svg'},
     ]
     const Devtools=[
-        {id:0,name:'Git',img:'./icons/gitIcon.png'},
+        {id:0,name:'Git',img:'./icons/Git.svg'},
         {id:1,name:'Github',img:'./icons/GithubIcon.svg'},
         {id:2,name:'Visual Studio',img:'./icons/vscommunity.svg'},
         {id:3,name:'Visual Studio Code',img:'./icons/vsIcon.svg'},

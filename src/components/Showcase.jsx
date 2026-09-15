@@ -5,7 +5,7 @@ function Showcase() {
     { id: 2, name: "landing", img: "./images/landing.png" },
   ];
   return (
-    <div className="ShowcaseSection">
+    <div  id="Projects" className="ShowcaseSection">
       <div className="title">
         <h1>Showcase</h1>
       </div>
@@ -14,7 +14,7 @@ function Showcase() {
           <img src="./icons/webIcon.svg" alt="" />
           <p>Webpages</p>
         </div>
-        <ul className="list">
+        <ul className="list"  >
           {lists.map((list) => {
             return (
               <li key={list.id}>

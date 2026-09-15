@@ -271,6 +271,7 @@
   display: flex;
   flex-direction: column;
   gap: 350px;
+  position: relative;
 }
 .HeroSection .HeroSmoke {
   position: absolute;
@@ -284,10 +285,28 @@
   z-index: -1;
   display: block;
   margin-bottom: -200px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  mask-image: linear-gradient(to right, transparent 0%, black 40%);
+  -webkit-mask-size: 250% 100%;
+  mask-size: 250% 100%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  animation: smokeReveal 3s ease-in-out infinite alternate;
+}
+@keyframes smokeReveal {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+  }
 }
 
 .ShowcaseSection {
   margin-top: 100px;
+  cursor: pointer;
 }
 .ShowcaseSection .title {
   display: flex;
