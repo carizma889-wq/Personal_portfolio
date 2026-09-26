@@ -2,11 +2,11 @@
 @use "./StartBar" as *;
 @use "./Skills" as *;
 .HeroContent {
-  margin-top: 325px;
+  margin-top: 25px;
   .imgageProfile {
     position: relative;
-    width: 504px;
-    height: 504px;
+    width: clamp(311.67px, 5vw, 504px);
+    height: clamp(311.67px, 5vw, 504px);
     border-radius: 50%;
     margin: 0 auto;
     &::before {

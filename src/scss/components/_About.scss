@@ -24,7 +24,7 @@
     margin: 50px auto;
     p {
       color: #ffffff;
-      font-size: 35.33px;
+      font-size: clamp(18.65px, 4vw, 35.33px);
       padding-bottom: 20px;
       line-height: 154.1%;
     }

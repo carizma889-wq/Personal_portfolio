@@ -50,7 +50,7 @@
     flex-direction: column;
     .details {
       .text {
-        font-size: 60px;
+        font-size: clamp(16px, 4vw, 60px);
         letter-spacing: 0;
         line-height: 132%;
         text-align: center;
@@ -75,9 +75,12 @@
             linear-gradient(to left, #9934b8 0%, #9934b8 66%, #08030a 100%)
               border-box;
           margin-bottom: 20px;
-          padding: 15px 40px;
-          width: 529px;
           margin-top: 20px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: clamp(20px, 4vw, 40px);
+          padding-right: clamp(50px, 6vw, 70px);
+          width: clamp(260px, 45vw, 529px);
           display: block;
           outline: none;
         }
@@ -90,7 +93,7 @@
           background-repeat: no-repeat;
           background-size: contain;
           top: 50%;
-          right: 30px;
+          right: clamp(20px, 4vw, 30px);
           transform: translateY(-50%);
         }
       }
@@ -98,16 +101,15 @@
         position: relative;
         textarea {
           display: block;
-
           border: 2px solid transparent;
           border-radius: 20px;
           background:
             linear-gradient(#08030a, #08030a) padding-box,
             linear-gradient(to right, #9934b8 0%, #9934b8 87%, #08030a 100%)
               border-box;
-          width: 529px;
-          height: 394px;
-          padding: 30px 35px;
+          width: clamp(260px, 45vw, 529px);
+          height: clamp(220px, 35vw, 394px);
+          padding: clamp(18px, 3vw, 30px) clamp(20px, 3.5vw, 35px);
           outline: none;
           resize: none;
         }

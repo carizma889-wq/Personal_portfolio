@@ -1,0 +1,63 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  .content {
+    background: #000000;
+    border-radius: 12px;
+    padding: 24px;
+    width: clamp(260px, 45vw, 805px);
+    height: clamp(400px, 45vw, 419px);
+    position: relative;
+    color: #ffffff;
+    .titleTap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+
+      .sectionName {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: left;
+        h3 {
+          color: white;
+          font-size: clamp(16.39px, 45vw, 30px);
+          font-family: "spartan";
+        }
+        .web {
+          margin-top: 5px;
+          width: clamp(27.06px, 45vw, 30px);
+        }
+      }
+      .closeBtn {
+        img {
+          width: clamp(27.06px, 45vw, 30px);
+        }
+      }
+    }
+    .fogmaOrWeb {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 44%);
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}

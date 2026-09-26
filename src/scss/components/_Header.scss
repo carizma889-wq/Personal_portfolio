@@ -35,8 +35,8 @@
     box-shadow: inset rgba(253, 253, 253, 0.075) 0px -2px 0px -1px;
 
     li {
-      padding-left: 45px;
-      padding-right: 45px;
+      padding-left: clamp(10px, 4vw, 45px);
+      padding-right: clamp(10px, 4vw, 45px);
       cursor: pointer;
       height: 100%;
       position: relative;
@@ -55,6 +55,15 @@
     .liText {
       position: relative;
       z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .headerSection {
+    .CVFile,
+    .linkedFile {
+      display: none;
     }
   }
 }

@@ -25,19 +25,18 @@ function StartBar() {
   <div className="detailsSection">
     <div
       className="content"
-
     >
-      <div style={{ textAlign: "center" }}>
-        <p className="gradient-text" style={{ fontSize: "40px" }}>Projects</p>
-        <h2 className="gradient-text" style={{ fontSize: "124px" }}>30+</h2>
+      <div className="statBlock" >
+        <p className="gradient-text statLabel" >Projects</p>
+        <h2 className="gradient-text statNumber">30+</h2>
       </div>
-      <div style={{ textAlign: "center" }}>
-        <p className="gradient-text" style={{ fontSize: "40px" }}>Customers</p>
-        <h2 className="gradient-text" style={{ fontSize: "124px" }}>10+</h2>
+      <div className="statBlock" >
+        <p className="gradient-text statLabel" >Customers</p>
+        <h2 className="gradient-text statNumber" >10+</h2>
       </div>
-      <div style={{ textAlign: "center" }}>
-        <p className="gradient-text" style={{ fontSize: "40px" }}>Experience</p>
-        <h2 className="gradient-text" style={{ fontSize: "124px" }}>5+</h2>
+      <div className="statBlock" >
+        <p className="gradient-text statLabel" >Experience</p>
+        <h2 className="gradient-text statNumber" >5+</h2>
       </div>
     </div>
   </div>

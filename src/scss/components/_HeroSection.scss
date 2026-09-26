@@ -4,7 +4,7 @@
 .HeroSection {
   display: flex;
   flex-direction: column;
-  gap: 350px;
+  gap: 150px;
   position: relative;
   .HeroSmoke {
     position: absolute;
@@ -26,6 +26,10 @@
     mask-position: 100% 0;
 
     animation: smokeReveal 3s ease-in-out infinite alternate;
+    @media (max-width: 768px) {
+      margin-top: 100px;
+      mask-image: 180% 100%;
+    }
   }
 
   @keyframes smokeReveal {
