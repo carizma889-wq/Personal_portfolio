@@ -1,4 +1,4 @@
-import TextPressure from "./TextPressure";
+import TextPressSure from "./TextPressSure";
 function HeroFooter() {
   const listData = [
     {
@@ -35,7 +35,7 @@ function HeroFooter() {
   return (
     <div className="HeroFoterSection">
       <div className="TextPressure">
-        <TextPressure />
+        <TextPressSure />
       </div>
       <div className="listContent">
         <ul>
