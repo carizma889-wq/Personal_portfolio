@@ -3,7 +3,7 @@ import TrueFocus from "./TrueFocus";
 import StartBar from "./StartBar";
 import Skills from "./Skills";
 import { useState,useEffect } from "react";
-import { supabase } from "@/supabaseClient";
+import { supabase } from "../supabaseClient";
 function HeroContent() {
   const [isMobile, setIsMobile] = useState(false);
   const [imgageProfile,setImgageProfile]=useState()
