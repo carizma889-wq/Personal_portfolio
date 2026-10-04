@@ -1,6 +1,17 @@
 import GradientBlinds from "./GradientBlinds";
-
+import { fetchShowcase } from "@/services/projectsService";
+import { useEffect,useState } from "react";
 function StartBar() {
+  const [lengthData,setLengthData]=useState([])
+  useEffect(()=>{
+    async function length() {
+      const data=await fetchShowcase()
+      setLengthData(data)
+    }
+    length()
+  },[])
+  const START_YEARS=2021;
+    const experience=new Date().getFullYear()-START_YEARS
   return (
        <div className="Gradient">
   <div className="GradientBlindsSection" >
@@ -28,15 +39,15 @@ function StartBar() {
     >
       <div className="statBlock" >
         <p className="gradient-text statLabel" >Projects</p>
-        <h2 className="gradient-text statNumber">30+</h2>
+        <h2 className="gradient-text statNumber">{lengthData.length}+</h2>
       </div>
       <div className="statBlock" >
         <p className="gradient-text statLabel" >Customers</p>
-        <h2 className="gradient-text statNumber" >10+</h2>
+        <h2 className="gradient-text statNumber" >2+</h2>
       </div>
       <div className="statBlock" >
         <p className="gradient-text statLabel" >Experience</p>
-        <h2 className="gradient-text statNumber" >5+</h2>
+        <h2 className="gradient-text statNumber" >{experience}+</h2>
       </div>
     </div>
   </div>

@@ -13,7 +13,7 @@ function ProjectCard({ project, onClose }) {
         </div>
         <div className="fogmaOrWeb">
           <a
-            href={project.liveUrl === null ? project.github : project.liveUrl}
+            href={project.liveUrl === 'none' ? project.github : project.liveUrl}
             target="_blank"
             rel="noreferrer"
           >

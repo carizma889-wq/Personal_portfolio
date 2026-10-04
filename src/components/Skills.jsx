@@ -1,36 +1,42 @@
+import { useState,useEffect,useMemo } from "react"
+import { fetchSkills } from "@/services/projectsService"
+
 function Skills() {
-    const Design=[
-        {id:1,name:'Figma',img:'./icons/FigmaIcon.svg'},
-        {id:2,name:'lunacy',img:'/icons/lunacyIcon.png'},
-        {id:3,name:'responsivelyApp',img:'./icons/responsivelyAppIcon.png'},
-    ]
-    const Lang=[
-        {id:1,name:'html',img:'./icons/HtmlIcon.svg'},
-        {id:2,name:'css',img:'./icons/cssICon.svg'},
-        {id:3,name:'Javascript',img:'./icons/jsIcon.svg'},
-        {id:4,name:'Typescript',img:'./icons/TsIcon.svg'},
-        {id:5,name:'python',img:'./icons/pyIcon.svg'},
-        {id:6,name:'C++',img:'./icons/c++ICon.svg'},
-    ]
-    const Devtools=[
-        {id:0,name:'Git',img:'./icons/Git.svg'},
-        {id:1,name:'Github',img:'./icons/GithubIcon.svg'},
-        {id:2,name:'Visual Studio',img:'./icons/vscommunity.svg'},
-        {id:3,name:'Visual Studio Code',img:'./icons/vsIcon.svg'},
-        {id:4,name:'Front-end Mentor',img:'./icons/MentorIcon.svg'},
-        {id:5,name:'Notion',img:'./icons/notionIcon.svg'},
-        {id:6,name:'leetcode',img:'./icons/leetcodeICons.png'},
-        {id:7,name:'Cursor',img:'./icons/openaIcon.svg'},
-    ]
-    const Frameworks=[
-        {id:0,name:'React.js',img:'./icons/ReactIcon.png'},
-        {id:1,name:'Next.js',img:'./icons/Nexticon.png'},
-        {id:2,name:'bootstrap',img:'./icons/bootstrapIcons.png'},
-    ]
-    const Other=[
-        {id:0,name:'Node.js',img:'./icons/NodeIcon.svg'},
-        {id:1,name:'claude',img:'./icons/claudeIcons.png'},
-    ]
+    const [dataSkills,setDataSkills]=useState([])
+    useEffect(()=>{
+        async function  loadSkills() {
+            const data=await fetchSkills();
+            if (data){
+                setDataSkills(data)
+            }
+        }
+        loadSkills()
+    },[])
+const design = useMemo(
+  () => dataSkills.filter((s) => s.category === "Design"),
+  [dataSkills]
+);
+const Lang = useMemo(
+  () => dataSkills.filter((s) => s.category === "Lang"),
+  [dataSkills]
+);
+    console.log('skilllsPage',dataSkills)
+
+const Devtools = useMemo(
+  () => dataSkills.filter((s) => s.category === "Devtools"),
+  [dataSkills]
+);
+
+const Frameworks = useMemo(
+  () => dataSkills.filter((s) => s.category === "Frameworks"),
+  [dataSkills]
+);
+
+const Other = useMemo(
+  () => dataSkills.filter((s) => s.category === "Other"),
+  [dataSkills]
+);
+
   return (
 <div className="skillsSections">
   <div className="skills-header">
@@ -44,7 +50,7 @@ function Skills() {
                 <p >Design</p>
             </div>
             <ul>
-            {Design.map((res)=>{
+            {design.map((res)=>{
                 return(
                     <li key={res.id}>
                         <img src={res.img} width={'40px'} alt="" />

@@ -1,22 +1,40 @@
+const START_DATE = new Date("2020-06-01");
+function getYearsOfExperience(startDate) {
+  const now = new Date();
+  let years = now.getFullYear() - startDate.getFullYear();
+
+  const hasntHadAnniversary =
+    now.getMonth() < startDate.getMonth() ||
+    (now.getMonth() === startDate.getMonth() &&
+      now.getDate() < startDate.getDate());
+
+  if (hasntHadAnniversary) years--;
+  return years;
+}
+
 function About() {
+  const years = getYearsOfExperience(START_DATE);
+
   return (
     <div id="About Me" className="AboutSection">
       <div className="title">
         <h1>About Me</h1>
-      </div> 
+      </div>
       <div className="content">
         <p>
-          Hi, I’m Abdullah, an 21 years old Software Engineering student with over 5
-          years of experience in programming. <br />
-           I graduated from high school as
-          the second top student in the IT department, and I’m passionate about
-          web design,  <br />
-          development, and graphic creation. 
-          </p>
-          <p>Currently, I’m leading
-          one of the most active technology clubs at my university, where I
-          continue to grow as both a designer and a developer.
-          </p>
+          Hi, I'm Abdullah, a Front-End Developer with {years}+ years of
+          experience building clean, responsive web interfaces.
+        </p>
+        <p>
+          I work mainly with React, Redux, and Supabase, and I care about
+          turning designs into fast, polished products. I'm currently studying
+          Business Systems and Administration, which helps me build products
+          with real business needs in mind.
+        </p>
+        <p>
+          I'm always learning, and I'm open to junior front-end opportunities
+          where I can grow and contribute.
+        </p>
       </div>
     </div>
   );

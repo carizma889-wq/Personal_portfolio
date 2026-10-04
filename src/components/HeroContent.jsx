@@ -3,8 +3,10 @@ import TrueFocus from "./TrueFocus";
 import StartBar from "./StartBar";
 import Skills from "./Skills";
 import { useState,useEffect } from "react";
+import { supabase } from "@/supabaseClient";
 function HeroContent() {
   const [isMobile, setIsMobile] = useState(false);
+  const [imgageProfile,setImgageProfile]=useState()
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 768);
@@ -12,6 +14,13 @@ function HeroContent() {
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
   }, []);
+  useEffect(()=>{
+    async function getImageProfile() {
+      const { data } = supabase.storage.from("images").getPublicUrl("images/its_me.jpeg");
+      setImgageProfile(data.publicUrl);   
+    }
+    getImageProfile()
+  },[])
 
   return (
     <div className="HeroContent">
@@ -24,7 +33,7 @@ function HeroContent() {
         />
       </div>
       <div className="imgageProfile">
-        <img src="/images/1.jpg" alt="" />
+        <img src={imgageProfile} alt="" />
       </div>
       <div className="Specialization">
         <TrueFocus />

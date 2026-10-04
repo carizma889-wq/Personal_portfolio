@@ -1,12 +1,12 @@
 @use "./Header" as *;
 @use "./HeroContent" as *;
 @use "./Identification" as *;
-.HeroSection {
+.hero-section {
   display: flex;
   flex-direction: column;
   gap: 150px;
   position: relative;
-  .HeroSmoke {
+  .hero-section__smoke {
     position: absolute;
     width: 100%;
     max-width: none;

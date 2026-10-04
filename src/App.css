@@ -324,13 +324,13 @@
   margin-bottom: 25px;
 }
 
-.HeroSection {
+.hero-section {
   display: flex;
   flex-direction: column;
   gap: 150px;
   position: relative;
 }
-.HeroSection .HeroSmoke {
+.hero-section .hero-section__smoke {
   position: absolute;
   width: 100%;
   max-width: none;
@@ -351,7 +351,7 @@
   animation: smokeReveal 3s ease-in-out infinite alternate;
 }
 @media (max-width: 768px) {
-  .HeroSection .HeroSmoke {
+  .hero-section .hero-section__smoke {
     margin-top: 100px;
     mask-image: 180% 100%;
   }

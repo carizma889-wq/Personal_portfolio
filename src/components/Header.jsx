@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-
+import { useContacts } from "@/context/ContactContext";
 function Header() {
   const [active, setActive] = useState("Home");
   const listul = ["Home", "About Me", "Projects", "Contact"];
+    const { contacts } = useContacts();
   function scrollToSection(id){
     const element=document.getElementById(id)
     if(element){
@@ -13,13 +14,13 @@ function Header() {
   return (
     <div className="headerSection">
       <a
-        c
+        
         className="linkedFile"
-        href="https://www.linkedin.com/in/abdullah-nader-89a6b52aa"
+        href={contacts[0]?.value}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="/icons/LinkedInIcon.svg" alt="" />
+        <img src={contacts[0]?.icon}alt="" />
         <p>linkedin</p>
       </a>
       <ul className="listUl">
@@ -45,8 +46,8 @@ function Header() {
           );
         })}
       </ul>
-      <a href="https://drive.google.com/file/d/1lIsivRPx7PL6HvbLZk9kNE0HfEdiPDeZ/view?usp=sharing" target="_blank" rel="noopener noreferrer"   className="CVFile">
-        <img src="/icons/CV.svg" alt="" />
+      <a href={contacts[1]?.value} target="_blank" rel="noopener noreferrer"   className="CVFile">
+        <img src={contacts[1]?.icon} alt="" />
         <p>cv</p>
       </a>
     </div>
