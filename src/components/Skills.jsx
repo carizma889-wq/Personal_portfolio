@@ -20,7 +20,6 @@ const Lang = useMemo(
   () => dataSkills.filter((s) => s.category === "Lang"),
   [dataSkills]
 );
-    console.log('skilllsPage',dataSkills)
 
 const Devtools = useMemo(
   () => dataSkills.filter((s) => s.category === "Devtools"),
